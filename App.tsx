@@ -1,47 +1,93 @@
 import React from 'react';
-import { View, Text, Image } from 'react-native';
-import { ButtonCustom } from './Components/Buttons/Button';
+import { SafeAreaView, Text, TextInput, View, TouchableOpacity, Image } from 'react-native';
 
 export default function App() {
   return (
-    <View style={{ flex: 1 }}>
-      
-      <View style= {{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+    <SafeAreaView style={{ flex: 1, backgroundColor: '#fff' }}>
+      <View style={{ flex: 1, padding: 16 }}>
         <Text style={{
-          fontSize: 28,
+          fontSize: 32,
           fontWeight: 'bold',
-          letterSpacing: 4 }}
-        >
-          HELLO GAMERS!
-        </Text>
-        <Text style={{
-          fontSize: 16, 
-          color: '#222831',
-          textAlign: 'center',
-          margin: 10,
-        }}
-        >
-          welcome to the official site of the "mind maze" game, you must have a game account first to be able to explore more fully on this site.
-        </Text>
-      </View>
-
-      <View style= {{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <Image
-          source={require('./assets/splash-img.png')}
-          style={{ width: 250, height: 300, marginTop: 50 }}
-        />
-      </View>
-
-        <View style={{ 
-            flex: 1,
-            flexDirection: 'row', 
-            alignItems: 'center' ,
-            marginRight: 30,
-            marginLeft: 30,
+          marginBottom: 24,
+          marginTop: 54,
+          padding: 16,
         }}>
-          <ButtonCustom color='#fff' text='Login' backgroundColor='#222831' />
-          <ButtonCustom color='#222831' text='Register' />
+          Login
+        </Text>
+        
+        <View
+          style={{
+            marginBottom: 16,
+            backgroundColor: '#fff',
+            width: '100%',
+            flex: 1,
+            marginTop: 76,
+          }}
+        >
+          <TextInput
+            style={{
+              padding: 8,
+              marginBottom: 8,
+              borderWidth: 1,
+              borderColor: '#ccc',
+              borderRadius: 8,
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}
+            placeholder="Email"
+          />
+          <TextInput
+            style={{
+              padding: 8,
+              borderWidth: 1,
+              marginBottom: 8,
+              borderColor: '#ccc',
+              borderRadius: 8,
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}
+            placeholder="Password"
+            secureTextEntry
+          />
+          <TouchableOpacity>
+            <Text style={{
+              color: 'red',
+              textAlign: 'right',
+              marginBottom: 16,
+            }}>
+              Forgot your password?
+            </Text>
+          </TouchableOpacity>
+        
+          <TouchableOpacity
+          style={{
+            backgroundColor: 'red',
+            padding: 16,
+            borderRadius: 25,
+            alignItems: 'center',
+            marginBottom: 24,
+          }}
+        >
+          <Text style={{ color: '#fff', fontWeight: 'bold' }}>LOGIN</Text>
+        </TouchableOpacity>
         </View>
-    </View>
+        
+        <Text style={{ textAlign: 'center', marginBottom: 16 }}>Or login with social account</Text>
+        <View style={{ flexDirection: 'row', justifyContent: 'center' }}>
+          <TouchableOpacity style={{ marginHorizontal: 8 }}>
+            <Image
+              source={require('./assets/google.png')}
+              style={{ width: 50, height: 50, backgroundColor: '#f0f0f0', borderRadius: 10}}
+            />
+          </TouchableOpacity>
+          <TouchableOpacity style={{ marginHorizontal: 8 }}>
+            <Image
+              source={require('./assets/facebook.png')}
+              style={{ width: 50, height: 50, backgroundColor: '#f0f0f0', borderRadius: 10 }}
+            />
+          </TouchableOpacity>
+        </View>
+      </View>
+    </SafeAreaView>
   );
 }
