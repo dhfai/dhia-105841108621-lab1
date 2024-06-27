@@ -7,6 +7,7 @@ export default function App() {
     "MetroBold": require("./assets/fonts/Metropolis-Bold.otf"),
     "MetroLight": require("./assets/fonts/Metropolis-Light.otf"),
     "MetroSemibold": require("./assets/fonts/Metropolis-SemiBold.otf"),
+    "MetroMedium": require("./assets/fonts/Metropolis-Medium.otf"),
   })
   
   if (!fontsLoaded) {
@@ -24,6 +25,8 @@ export default function App() {
       <Text style={{ fontFamily: "MetroBlack" }}>Metro Black</Text>
       <Text style={{ fontFamily: "MetroBold" }}>Metro Bold</Text>
       <Text style={{ fontFamily: "MetroLight" }}>Metro Light</Text>
+      <Text style={{ fontFamily: "MetroLight" }}>Metro Light</Text>
+      <Text style={{ fontFamily: "MetroMedium" }}>Metro Medium</Text>
       <Text style={{ fontFamily: "MetroSemibold" }}>Metro Semi Bold</Text>
       <Text>Font biasa</Text>
     </View>
