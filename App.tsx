@@ -2,20 +2,10 @@ import * as React from 'react';
 import { View, Text, Button } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import LoginPages from './Components/Pages/LoginPages';
+import {LoginPage} from './Components/Pages/LoginPage';
 import { useFonts } from 'expo-font';
-
-function HomeScreen({ navigation}: {navigation: React.ComponentProps<any>}) {
-  
-  return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text style={{
-        fontFamily: 'MetroBlack',
-      }}>Home Screen</Text>
-      <Button title="Ke Halaman Login" onPress={() => navigation.navigate('Login')} />
-    </View>
-  );
-}
+import { RegisterPage } from './Components/Pages/RegisterPage'
+import { ForgetPasswordPage } from './Components/Pages/ForgetPasswordPage';
 
 const Stack = createNativeStackNavigator();
 
@@ -31,13 +21,31 @@ function App() {
   if (!fontsLoaded) {
     return <View><Text>Font tidak ada </Text></View>
   }
+
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="Login" component={LoginPages} options={{
-          
-        }} />
+        <Stack.Screen
+          name="Register"
+          component={RegisterPage}
+          options={{
+            headerShown: false
+          }}
+        />
+        <Stack.Screen
+          name="Login"
+          component={LoginPage}
+          options={{
+            headerShown: false,
+          }}
+        />
+        <Stack.Screen
+          name="ForgetPassword"
+          component={ForgetPasswordPage}
+          options={{
+            headerShown: false,
+          }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
