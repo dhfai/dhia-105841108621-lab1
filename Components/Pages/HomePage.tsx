@@ -7,7 +7,7 @@ export function HomeScreen({ navigation}: {navigation: React.ComponentProps<any>
         <Text style={{
           fontFamily: 'MetroBlack',
         }}>Splace Screen</Text>
-        <Button title="Ke Halaman Login" onPress={() => navigation.navigate('Login')} />
+        <Button title="Ke Halaman Login" onPress={() => navigation.goBack()} />
       </View>
     );
   }

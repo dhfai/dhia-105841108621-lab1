@@ -44,6 +44,7 @@ export function RegisterForm({ fields, navigation }: InputFormProps) {
                     alignItems: 'center',
                     marginBottom: 24,
                 }}
+                onPress={() => navigation.navigate('Home')}
             >
                 <Text style={{ color: '#fff', fontWeight: 'bold' }}>SIGN UP</Text>
             </TouchableOpacity>

@@ -12,7 +12,7 @@ export function RegisterPage({ navigation }: { navigation: React.ComponentProps<
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: '#EEEEEE', marginTop: 40}}>
             <View style={{ flex: 1, marginTop: 54 }}>
-                <Text style={{ fontSize: 32, fontWeight: 'bold', marginBottom: 24, padding: 16, fontFamily: 'MetroBold' }}>
+                <Text  style={{ fontSize: 32, fontWeight: 'bold', marginBottom: 24, padding: 16, fontFamily: 'MetroBold' }}>
                     Sign up
                 </Text>
 
