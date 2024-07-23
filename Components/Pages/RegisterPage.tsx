@@ -1,6 +1,6 @@
 import React from 'react';
 import { SafeAreaView, Text, TextInput, View, TouchableOpacity, Image, Button } from 'react-native';
-import { RegisterForm } from '../utils/RegisterForm';
+import { RegisterForm } from '../../src/utils/RegisterForm';
 
 export function RegisterPage({ navigation }: { navigation: React.ComponentProps<any> }) {
     const fields = [

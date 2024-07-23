@@ -1,6 +1,6 @@
 import React from 'react';
 import { SafeAreaView, Text, TextInput, View, TouchableOpacity, Image, Button } from 'react-native';
-import { LoginForm } from '../utils/LoginForm';
+import { LoginForm } from '../../src/utils/LoginForm';
 import { Ionicons } from '@expo/vector-icons';
 
 export function ForgetPasswordPage({ navigation }: { navigation: React.ComponentProps<any> }) {
