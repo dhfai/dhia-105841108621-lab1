@@ -14,7 +14,7 @@ const AppNavigator: React.FC = () => {
         <NavigationContainer>
             <Stack.Navigator>
                 <Stack.Screen name="SignUp" component={RegisterPage} options={{ headerShown: false }} />
-                <Stack.Screen name="Login" component={LoginPage} options={{  }} />
+                <Stack.Screen name="Login" component={LoginPage} options={{ headerShown: false }} />
                 <Stack.Screen name="ForgotPassword" component={ForgotPasswordPage}  options={{ headerShown: false }} />
                 <Stack.Screen name="Tabs" component={MyTabs} options={{ headerShown: false }} />
                 <Stack.Screen name="Splash" component={SplashScreen} options={{ headerShown: false }} />
