@@ -20,6 +20,10 @@ const RegisterPage: React.FC<{ navigation: any }> = ({ navigation }) => {
         setIsEmailValid(email.includes('@'));
     };
 
+    const onSubmit = () => {
+        
+    }
+
     return (
         <View style={{ flex: 1, padding: 20, marginTop: 50 }}>
         <Text style={{ fontSize: 34, marginBottom: 150, textAlign: 'left', fontFamily: 'MetroBold' }}>Sign up</Text>
