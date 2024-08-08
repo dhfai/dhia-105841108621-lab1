@@ -17,7 +17,7 @@ const TextInputField: React.FC<TextInputFieldProps> = ({ placeholder, secureText
             flexDirection: 'row',
             alignItems: 'center',
             borderRadius: 8,
-            padding: 20,
+            padding: 15,
             marginBottom: 10,
             backgroundColor: '#fff'
         }, style]}>
